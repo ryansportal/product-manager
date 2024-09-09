@@ -13,3 +13,12 @@ class ProjectCreationForm(ProjectCreationFormTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+ project_name = self.project_name_textbox.text
+    description = self.description_textarea.text
+    due_date = self.due_date_picker.date
+
+    if project_name:
+        anvil.server.call('create_project', project_name, description, due_date)
+        alert("Project created successfully!")
+    else:
+        alert("Please enter a project name.")

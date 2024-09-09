@@ -6,7 +6,7 @@ components_by_slot:
       name: new_task
       properties: {icon: 'fa:plus', role: elevated-button, text: New Task}
       type: Button
-    - event_bindings: {click: delete_task_click}
+    - event_bindings: {}
       layout_properties: {grid_position: 'RRMVXI,MJJLFM'}
       name: delete_task
       properties: {icon: 'fa:plus', role: elevated-button, text: Delete Task}

@@ -16,24 +16,5 @@ class product_management(product_managementTemplate):
 
   #add new project
   def new_project_click(self, **event_args):
-    project_name = self.project_name_textbox.text
-    description = self.description_textarea.text
-    due_date = self.due_date_picker.date
+   open_form('ProjectCreationForm')
 
-    if project_name:
-        anvil.server.call('create_project', project_name, description, due_date)
-        alert("Project created successfully!")
-    else:
-        alert("Please enter a project name.")
-
-def save_task_click(self, **event_args):
-    title = self.title_textbox.text
-    description = self.description_textbox.text
-    due_date = self.due_date_picker.date
-    assignee = self.assignee_dropdown.selected_value
-
-    if title and assignee:
-        anvil.server.call('create_task', self.project_id, title, description, due_date, assignee)
-        alert("Task Created")
-    else:
-        alert("Please fill in all required fields.")

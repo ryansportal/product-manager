@@ -13,3 +13,7 @@ class TaskCreationForm(TaskCreationFormTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+  def task_status_dropdown_change(self, **event_args):
+    task_id = self.item['id']
+    new_status = self.status_dropdown.selected_value
+    anvil.server.call('update_task_status', task_id, new_status)
