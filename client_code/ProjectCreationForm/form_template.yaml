@@ -1,0 +1,46 @@
+components_by_slot:
+  body:
+  - components:
+    - components:
+      - layout_properties: {grid_position: 'KNIEML,ICCDZG KQXLSP,NNRKSC'}
+        name: label_projname
+        properties: {text: Project Name}
+        type: Label
+      - layout_properties: {grid_position: 'KNIEML,ICCDZG XCZSMZ,SQFXHL'}
+        name: label_projdesc
+        properties: {text: Project Description}
+        type: Label
+      - layout_properties: {grid_position: 'KNIEML,ICCDZG XLZSGH,LLAZDJ'}
+        name: label_duedate
+        properties: {text: Due Date}
+        type: Label
+      - layout_properties: {grid_position: 'KNIEML,ICCDZG LAFMZC,POBVID'}
+        name: label_assignee
+        properties: {text: Assignee}
+        type: Label
+      - layout_properties: {grid_position: 'KNIEML,GRVPFT KBCASH,SAEBKB'}
+        name: projname_box
+        properties: {role: outlined}
+        type: TextBox
+      - layout_properties: {grid_position: 'KNIEML,GRVPFT OOAYFL,CVRSNS'}
+        name: projdesc_box
+        properties: {role: outlined}
+        type: TextBox
+      - layout_properties: {grid_position: 'KNIEML,GRVPFT NMQUAU,KOXENI'}
+        name: date_picker_1
+        properties: {role: outlined}
+        type: DatePicker
+      - layout_properties: {grid_position: 'KNIEML,GRVPFT UXHCHI,RESBLT'}
+        name: assignee_drop_down
+        properties: {role: outlined}
+        type: DropDown
+      layout_properties: {grid_position: 'MIKKAC,WPCFDZ'}
+      name: outlined_card_1_copy
+      properties: {role: outlined-card}
+      type: ColumnPanel
+    layout_properties: {}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+is_package: true
+layout: {type: 'form:Template'}
