@@ -26,9 +26,9 @@ color_scheme:
   - {color: '#cd372c', name: Light Overlay 2}
   - {color: '#0094d2', name: Dark Overlay 1}
   - {color: '#0094d2', name: Dark Overlay 2}
-  - {color: 'rgba(103, 80, 164, 0.05)', name: Primary Overlay 1}
-  - {color: 'rgba(103, 80, 164, 0.08)', name: Primary Overlay 2}
-  - {color: 'rgba(103, 80, 164, 0.11)', name: Primary Overlay 3}
+  - {color: '#212f3d', name: Primary Overlay 1}
+  - {color: '#212f3d', name: Primary Overlay 2}
+  - {color: '#212f3d', name: Primary Overlay 3}
   preset_groups:
   - name: Colour Scheme
     options:
