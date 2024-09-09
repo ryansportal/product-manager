@@ -9,12 +9,7 @@ import anvil.server
 #
 # To allow anvil.server.call() to call functions here, we mark
 # them with @anvil.server.callable.
-# Here is an example - you can replace it with your own:
-#
-# @anvil.server.callable
-# def say_hello(name):
-#   print("Hello, " + name + "!")
-#   return 42
+
 
 #Users
 @anvil.server.callable
@@ -22,3 +17,13 @@ def check_user():
   user = anvil.users.get_user()
   if user is None:
     raise anvil.users.AuthenticationFailed('user not logged in')
+
+#data tables
+@anvil.server.callable
+def add_column_to_db(column_name, project, type):
+    #project is a row from the Projects Data Table
+    #add a new row to the Columns Data Table  
+  column_row = app_tables.columns.add_row(title=column_name, type=type)
+   #link the new column to Projects
+  project['columns'] += [column_row]
+  return column_row

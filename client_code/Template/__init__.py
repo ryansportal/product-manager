@@ -14,15 +14,14 @@ class Template(TemplateTemplate):
 
     # Any code you write here will run before the form opens.
 
+
+
+  def home_button_click(self, **event_args):
+    open_form('Home')
+
+  def product_management_button_click(self, **event_args):
+    open_form('product_management')
+
   def button_logout_click(self, **event_args):
     anvil.users.logout()
     open_form('Login')
-
-    n = Notification("Log out successful")
-    n.show()
-
-  def home_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Home')
-
-

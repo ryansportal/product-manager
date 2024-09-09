@@ -1,0 +1,33 @@
+components_by_slot:
+  body:
+  - components:
+    - name: repeating_panel_1
+      properties: {item_template: product_management.RowTemplate1}
+      type: RepeatingPanel
+    layout_properties: {}
+    name: data_grid_1
+    properties:
+      columns:
+      - {data_key: column_1, id: JKSDUP, title: Column 1}
+      - {data_key: column_2, id: VJQQOR, title: Column 2}
+      - {data_key: column_3, id: OJLQEN, title: Column 3}
+    type: DataGrid
+  slot_1:
+  - layout_properties: {}
+    name: spacer_1
+    properties: {height: 109.4453125}
+    type: Spacer
+  - components: []
+    layout_properties: {}
+    name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+  title:
+  - layout_properties: {}
+    name: label_1
+    properties: {text: Product Management}
+    type: Label
+is_package: true
+layout:
+  form_event_bindings: {}
+  type: form:Template

@@ -15,16 +15,21 @@ components:
   properties: {}
   type: FlowPanel
 - components:
-  - event_bindings: {click: button_1_click}
-    layout_properties: {grid_position: 'JRAOPG,BDTJKJ'}
+  - event_bindings: {click: home_button_click}
+    layout_properties: {grid_position: 'FRZKOQ,NWKLXU JRAOPG,BDTJKJ'}
     name: home_button
     properties: {text: Home}
     type: Button
-  - layout_properties: {grid_position: 'DUJRUX,RJQJZS'}
-    name: button_1_copy
-    properties: {text: Tracker}
+  - event_bindings: {click: product_management_button_click}
+    layout_properties: {grid_position: 'FRZKOQ,NWKLXU DUJRUX,RJQJZS'}
+    name: product_management_button
+    properties: {text: Product Management}
     type: Button
-  - layout_properties: {grid_position: 'MXIQUC,ITDYEY'}
+  - layout_properties: {grid_position: 'FRZKOQ,NWKLXU NPYTUQ,QWOOZT'}
+    name: spacer_1
+    properties: {height: 478.16796875}
+    type: Spacer
+  - layout_properties: {grid_position: 'FRZKOQ,NWKLXU ETKRGT,HWPQID'}
     name: image_1
     properties: {background: '', display_mode: shrink_to_fit, height: '150', horizontal_align: center, source: _/theme/Untitled.png, spacing_above: large, spacing_below: large}
     type: Image
@@ -43,7 +48,11 @@ slots:
     index: 0
     set_layout_properties: {grid_position: 'DXEXYY,UJFBMR'}
     target: {name: content_panel, type: container}
+  slot_1:
+    index: 2
+    set_layout_properties: {grid_position: 'FRZKOQ,SAVJVV'}
+    target: {name: column_panel_1, type: container}
   title:
-    index: 3
+    index: 7
     set_layout_properties: {slot: title}
     target: {name: '', type: container}
