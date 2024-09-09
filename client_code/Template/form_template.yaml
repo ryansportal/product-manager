@@ -50,7 +50,7 @@ slots:
     target: {name: content_panel, type: container}
   slot_1:
     index: 2
-    set_layout_properties: {grid_position: 'FRZKOQ,SAVJVV'}
+    set_layout_properties: {grid_position: 'FRZKOQ,TBIBUR'}
     target: {name: column_panel_1, type: container}
   title:
     index: 7

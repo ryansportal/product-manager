@@ -1,0 +1,19 @@
+components:
+- layout_properties: {column: UHISFQ}
+  name: Assignee_DD
+  properties: {role: outlined}
+  type: DropDown
+- layout_properties: {column: FOSBDT}
+  name: assignee_dd
+  properties: {role: outlined}
+  type: DropDown
+- layout_properties: {column: LEKDRO}
+  name: status_dd
+  properties: {role: outlined}
+  type: DropDown
+- layout_properties: {column: CFQSSY}
+  name: check_box
+  properties: {text: ''}
+  type: CheckBox
+container: {type: DataRowPanel}
+is_package: true
