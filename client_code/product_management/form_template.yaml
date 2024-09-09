@@ -2,16 +2,18 @@ components_by_slot:
   body:
   - components:
     - name: repeating_panel_1
-      properties: {item_template: product_management.RowTemplate1}
+      properties: {item_template: product_management.RowTemplate3}
       type: RepeatingPanel
     layout_properties: {}
     name: data_grid_1
     properties:
-      columns:
-      - {data_key: column_1, id: JKSDUP, title: Column 1}
-      - {data_key: column_2, id: VJQQOR, title: Column 2}
-      - {data_key: column_3, id: OJLQEN, title: Column 3}
+      columns: []
     type: DataGrid
+  - event_bindings: {click: add_new_row_link_click}
+    layout_properties: {}
+    name: add_new_row_link
+    properties: {text: + New}
+    type: Link
   slot_1:
   - layout_properties: {}
     name: spacer_1
