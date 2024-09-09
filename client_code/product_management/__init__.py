@@ -19,15 +19,18 @@ class product_management(product_managementTemplate):
    open_form('ProjectCreationForm')
 
   # Load all projects when the form is initialized
-   self.load_projects()
+ #  self.load_projects()
 
-  def load_projects(self):
+  #def load_projects(self):
         # Call the server function to fetch all projects
    projects = anvil.server.call('get_all_projects')
         
         # Set the fetched projects as the items for the repeating panel
-   self.repeating_panel_1.items = projects
+   self.repeating_panel_1.items = projec
 
-  def repeating_panel_1_show(self, **event_args):
-    """This method is called when the repeating panel is shown on the screen"""
-    pass
+ # def repeating_panel_1_show(self, **event_args):
+#    """This method is called when the repeating panel is shown on the screen"""
+#    pass
+
+
+   self.repeating_panel_1.items = app_tables.projects.search()

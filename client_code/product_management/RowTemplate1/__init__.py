@@ -14,4 +14,9 @@ class RowTemplate1(RowTemplate1Template):
 
     # Any code you write here will run before the form opens.
 
-
+# This function is called when the data for this row is set
+    def item_load(self):
+        # self.item refers to the current project's data (automatically set by the repeating panel)
+        self.project_name.text = self.item['name']
+        self.description.text = self.item['description']
+        self.due_date.text = str(self.item['due_date'])
