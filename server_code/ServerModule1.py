@@ -22,21 +22,10 @@ def check_user():
 #Create project
 @anvil.server.callable
 def create_project(name, description, due_date):
-    app_tables.projects.add_row(name=name, description=description, due_date=due_date)
+    app_tables.projects.add_row(project_name=name, description=description, due_date=due_date)
 
-#Create task 
-
+#Display all projects
 @anvil.server.callable
-def create_task(project_id, title, description, due_date, assignee_email, status):
-    project = app_tables.projects.get_by_id(project_id)
-    assignee = app_tables.users.get(email=assignee_email)
-    
-    app_tables.tasks.add_row(
-        title=title, 
-        description=description, 
-        due_date=due_date,
-        project=project, 
-        assignee=assignee, 
-        status=status
-    )
+def get_all_projects():
+    return app_tables.projects.search()
 

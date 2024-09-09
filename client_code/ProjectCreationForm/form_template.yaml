@@ -38,9 +38,9 @@ components_by_slot:
       name: outlined_card_1_copy
       properties: {role: outlined-card}
       type: ColumnPanel
-    - event_bindings: {click: add_project_click}
-      layout_properties: {grid_position: 'SUYZJJ,DOBKVA'}
-      name: add_project_copy
+    - event_bindings: {click: addproject_button_click}
+      layout_properties: {grid_position: 'PVTMRQ,VKWCKV'}
+      name: addproject_button
       properties: {icon: 'fa:plus', role: elevated-button, text: Add Project}
       type: Button
     layout_properties: {}

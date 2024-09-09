@@ -52,6 +52,10 @@ slots:
     index: 2
     set_layout_properties: {grid_position: 'FRZKOQ,TBIBUR'}
     target: {name: column_panel_1, type: container}
+  slot_2:
+    index: 0
+    set_layout_properties: {grid_position: 'FUDWPG,LLEAMX'}
+    target: {name: content_panel, type: container}
   title:
     index: 7
     set_layout_properties: {slot: title}

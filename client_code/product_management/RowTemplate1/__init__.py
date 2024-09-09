@@ -14,9 +14,4 @@ class RowTemplate1(RowTemplate1Template):
 
     # Any code you write here will run before the form opens.
 
-  def view_project_click(self, **event_args):
- # Get the current project (self.item refers to the data for the current row)
-    project = self.item
-    
-    # Open the ProjectDetailForm and pass the project details
-    open_form('ProjectDetailForm', project=project)
+
