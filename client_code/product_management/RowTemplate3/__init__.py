@@ -5,8 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..EditableLink import EditableLink
-from ..NewColumnModal import NewColumnModal
+
 
 class RowTemplate3(RowTemplate3Template):
   def __init__(self, **properties):

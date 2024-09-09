@@ -18,6 +18,10 @@ def check_user():
   if user is None:
     raise anvil.users.AuthenticationFailed('user not logged in')
 
+
+USER_COLORS = ['Primary', 'Secondary', 'Tertiary', 'Primary Container', 'On Secondary Container']
+
+
 #data tables
 @anvil.server.callable(require_user=True)
 def add_project_to_table(project_name):

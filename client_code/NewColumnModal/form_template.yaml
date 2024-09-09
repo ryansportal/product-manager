@@ -1,0 +1,29 @@
+components:
+- layout_properties: {grid_position: 'GGDPQW,WCREAW'}
+  name: label_1
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: Create New Column, tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'HXRNUT,YFTMYY'}
+  name: label_2
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: input-prompt, spacing_above: small, spacing_below: small, text: 'Title:', tooltip: '', underline: false, visible: true}
+  type: Label
+- event_bindings: {change: title_text_box_change}
+  layout_properties: {grid_position: 'HXRNUT,YKHGSE'}
+  name: title_text_box
+  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+  type: TextBox
+- layout_properties: {grid_position: 'RPHBVU,BRCOZM'}
+  name: label_3
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: input-prompt, spacing_above: small, spacing_below: small, text: 'Type:', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'RPHBVU,ASAGJO'}
+  name: type_dropdown
+  properties: {}
+  type: DropDown
+- event_bindings: {click: create_button_click}
+  layout_properties: {grid_position: 'LQGIOZ,SPAQTA'}
+  name: create_button
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: tonal-button, spacing_above: small, spacing_below: small, text: Create, tooltip: '', underline: false, visible: true}
+  type: Button
+container: {type: ColumnPanel}
+is_package: true

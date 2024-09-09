@@ -5,7 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+from ..EditableLink import EditableLink
 from ..NewColumnModal import NewColumnModal
 
 class product_management(product_managementTemplate):

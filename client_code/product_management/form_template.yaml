@@ -1,5 +1,11 @@
 components_by_slot:
   body:
+  - data_bindings:
+    - {code: 'self.item[''project_name'']', property: item, writeback: false}
+    layout_properties: {}
+    name: editable_project_name
+    properties: {}
+    type: form:EditableLink
   - components:
     - name: repeating_panel_1
       properties: {item_template: product_management.RowTemplate3}
