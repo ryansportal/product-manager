@@ -20,3 +20,9 @@ class Template(TemplateTemplate):
 
     n = Notification("Log out successful")
     n.show()
+
+  def home_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Home')
+
+
