@@ -31,26 +31,32 @@ def create_task(project_id, title, description, due_date, assignee_email):
         due_date=due_date,
         project=project,
         assignee=assignee,
-        status="To Do"
-    )
-    return new_task
+        status=status
+      
+ 
 
 #PM - Update task status
 
-@anvil.server.callable
+##@anvil.server.callable
 def update_task_status(task_id, status):
     task = app_tables.tasks.get_by_id(task_id)
     task.update(status=status)
 
 #PM - Assign users
-@anvil.server.callable
+##@anvil.server.callable
 def assign_task_to_user(task_id, user_email):
     user = app_tables.users.get(email=user_email)
     task = app_tables.tasks.get_by_id(task_id)
     task.update(assignee=user)
 
-# Add a comment
+### Add a comment
 @anvil.server.callable
 def add_comment(task_id, comment_text):
     task = app_tables.tasks.get_by_id(task_id)
     app_tables.comments.add_row(task=task, comment_text=comment_text)
+
+
+#add project
+@anvil.server.callable
+def create_project(name, description, due_date):
+    app_tables.projects.add_row(name=name, description=description, due_date=due_date)

@@ -14,6 +14,18 @@ class product_management(product_managementTemplate):
     # Any code you write here will run before the form opens.
 #Front end logic to interact with the backend functions in server
 
+  #add new project
+  def new_project_click(self, **event_args):
+    project_name = self.project_name_textbox.text
+    description = self.description_textarea.text
+    due_date = self.due_date_picker.date
+
+    if project_name:
+        anvil.server.call('create_project', project_name, description, due_date)
+        alert("Project created successfully!")
+    else:
+        alert("Please enter a project name.")
+
 def save_task_click(self, **event_args):
     title = self.title_textbox.text
     description = self.description_textbox.text
