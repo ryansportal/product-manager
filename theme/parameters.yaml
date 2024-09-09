@@ -24,7 +24,7 @@ color_scheme:
   - {color: 'rgba(28, 27, 31, 0.12)', name: Disabled Container}
   - {color: '#cd372c', name: Light Overlay 1}
   - {color: '#cd372c', name: Light Overlay 2}
-  - {color: '#0094d2', name: Dark Overlay 1}
+  - {color: '#212f3d', name: Dark Overlay 1}
   - {color: '#0094d2', name: Dark Overlay 2}
   - {color: '#212f3d', name: Primary Overlay 1}
   - {color: '#212f3d', name: Primary Overlay 2}
