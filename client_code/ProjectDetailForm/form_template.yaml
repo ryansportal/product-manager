@@ -7,11 +7,11 @@ components_by_slot:
         properties: {foreground: 'theme:On Secondary Container', item_template: ProjectDetailForm.RowTemplate2}
         type: RepeatingPanel
       layout_properties: {full_width_row: true, grid_position: 'IIIHFY,QOMYNQ'}
-      name: data_grid_1
+      name: tasks_data_grid
       properties:
         background: theme:Primary
         columns:
-        - {data_key: project, id: YPBJYZ, title: project_name}
+        - {data_key: project_name, id: YPBJYZ, title: project_name}
         - {data_key: description, id: IKRVWN, title: description}
         - {data_key: status, id: LEKDRO, title: status}
         - {data_key: users, id: UHISFQ, title: Assignee}

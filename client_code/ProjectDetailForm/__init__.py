@@ -8,20 +8,24 @@ from anvil.tables import app_tables
 
 
 class ProjectDetailForm(ProjectDetailFormTemplate):
-  def __init__(self, **properties):
+  def __init__(self, project=None, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
- # Display project details
-    self.project_name_label.text = str(self.project.get('project_name', ''))
-    self.project_description_label.text = str(self.project.get('description', ''))
-     
-# Load tasks for the project into the data grid
-    self.load_tasks()
+    # Save the passed project row to use later
+    self.project_row = project  # Use the 'project' parameter passed to the form
+
+    # Load tasks for the project into the data grid
+    self.load_tasks()          
+
 
   def load_tasks(self):
-    project_id = self.project.get('id')
-    if project_id:
-        tasks = anvil.server.call('get_tasks_for_project', project_id)
+    # Ensure we have a valid project_row
+    if self.project_row:
+        # Call the server function to get tasks for this project
+        tasks = anvil.server.call('get_tasks_for_project', self.project_row)
+        
+        # Set the tasks to the data grid or repeating panel
         self.tasks_data_grid.items = tasks
- 
+    else:
+        alert("No project was provided to load tasks.")

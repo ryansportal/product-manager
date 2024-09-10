@@ -12,4 +12,18 @@ class RowTemplate2(RowTemplate2Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
- 
+     # Manually trigger item_load to ensure it loads when the form opens
+    self.item_load()
+    
+    # Any code you write here will run before the form opens.
+  def text_box_project_name_show(self, **event_args):
+    self.text_box_project_name.text = str(self.item['project_name',''])
+
+    
+# This function is called when the data for this row is set
+  def item_load(self):
+    if self.item:
+        # Access the project_name directly using the column name without extra quotes or lists
+        self.text_box_project_name.text = str(self.item['project_name',''])
+    else:
+        print("No item data found")

@@ -28,9 +28,8 @@ def create_project(name, description, due_date):
         description=description, 
         due_date=due_date
     )
-    # Get the unique ID assigned by Anvil
-    project_id = project_row.get_id()
-    return project_id
+    # Get and return the auto-generated ID for this new project
+    return project_row.get_id()
 
 
 #Display all projects
@@ -52,5 +51,6 @@ def update_project(project_id, name, description):
 
 #Get Tasks for specific project
 @anvil.server.callable
-def get_tasks_for_project(project_id):
-    return app_tables.tasks.search(project_id=project_id)
+def get_tasks_for_project(project_row):
+    return app_tables.tasks.search(project_name_link=project_row)
+
