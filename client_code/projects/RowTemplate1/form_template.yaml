@@ -22,6 +22,17 @@ components:
   name: text_box_project_description
   properties: {align: left, background: 'theme:Primary', foreground: 'theme:On Secondary Container', role: null, text: ''}
   type: TextBox
+- event_bindings: {change: drop_down_1_change, show: drop_down_1_show}
+  layout_properties: {column: VSJJWG}
+  name: drop_down_1
+  properties:
+    background: theme:Primary
+    foreground: theme:On Secondary Container
+    include_placeholder: true
+    items: ['Yes', 'No', N/A]
+    placeholder: '-'
+    role: outlined
+  type: DropDown
 container:
   properties: {auto_display_data: true}
   type: DataRowPanel

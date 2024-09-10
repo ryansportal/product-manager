@@ -8,13 +8,10 @@ from anvil.tables import app_tables
 
 class projects(projectsTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
+# Set Form properties and Data Bindings.
     self.init_components(**properties)
  
-    
-    #self.repeating_panel_1.items = app_tables.projects.search()
-
-    # Load all projects when the form is initialized
+# Load all projects when the form is initialized
     self.load_projects()
 
   def load_projects(self):
@@ -24,11 +21,7 @@ class projects(projectsTemplate):
 # Set the fetched projects as the items for the repeating panel
     self.repeating_panel_1.items = projects
 
-
-  
-  
-  
-  #add new project
+#add new project
   def new_project_click(self, **event_args):
    open_form('ProjectCreationForm')
 

@@ -23,8 +23,9 @@ components_by_slot:
         background: theme:Primary
         border: ''
         columns:
-        - {data_key: project_name, expand: false, id: QNUIYX, title: Project}
+        - {data_key: project_name, expand: false, id: QNUIYX, title: Project, width: 285.6953125}
         - {data_key: description, expand: false, id: IGHQGR, title: Description, width: 378.734375}
+        - {data_key: in_progress, id: VSJJWG, title: In Progress}
         - {data_key: Component, expand: false, id: MOLHUF, title: ''}
         foreground: theme:On Secondary Container
         role: null

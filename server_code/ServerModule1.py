@@ -18,7 +18,6 @@ def check_user():
   if user is None:
     raise anvil.users.AuthenticationFailed('user not logged in')
 
-
 #Create project
 @anvil.server.callable
 def create_project(name, description, due_date):
@@ -31,12 +30,11 @@ def create_project(name, description, due_date):
     # Get and return the auto-generated ID for this new project
     return project_row.get_id()
 
-
 #Display all projects
 @anvil.server.callable
 def get_all_projects():
     return app_tables.projects.search()
-#Update Projects
+#SAVE Projects
 @anvil.server.callable
 def update_project(project_id, name, description):
     # Fetch the project from the database using its ID
@@ -54,3 +52,13 @@ def update_project(project_id, name, description):
 def get_tasks_for_project(project_row):
     return app_tables.tasks.search(project_name_link=project_row)
 
+#SAVE TASKS
+@anvil.server.callable
+def update_project_task(project_task_id, project_name, task_name, territory):
+    # Update the project task record in the data table
+    app_tables.tasks.update_row(
+        id=project_task_id,
+        project_name_link={'project_name': project_name},  # Adjust as needed
+        task_name=task_name,
+        territory=territory
+    )

@@ -29,3 +29,4 @@ class ProjectDetailForm(ProjectDetailFormTemplate):
         self.repeating_panel_1.items = tasks
     else:
         alert("No project was provided to load tasks.")
+
