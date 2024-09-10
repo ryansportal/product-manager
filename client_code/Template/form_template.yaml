@@ -16,20 +16,20 @@ components:
   type: FlowPanel
 - components:
   - event_bindings: {click: home_button_click}
-    layout_properties: {grid_position: 'FRZKOQ,NWKLXU JRAOPG,BDTJKJ'}
+    layout_properties: {grid_position: 'JRAOPG,BDTJKJ'}
     name: home_button
     properties: {text: Home}
     type: Button
   - event_bindings: {click: projects_button_click}
-    layout_properties: {grid_position: 'FRZKOQ,NWKLXU DUJRUX,RJQJZS'}
+    layout_properties: {grid_position: 'DUJRUX,RJQJZS'}
     name: projects_button
     properties: {text: Projects}
     type: Button
-  - layout_properties: {grid_position: 'FRZKOQ,NWKLXU NPYTUQ,QWOOZT'}
+  - layout_properties: {grid_position: 'NPYTUQ,GENDTH'}
     name: spacer_1
-    properties: {height: 390.5078125}
+    properties: {height: 218.98828125}
     type: Spacer
-  - layout_properties: {grid_position: 'FRZKOQ,NWKLXU ETKRGT,HWPQID'}
+  - layout_properties: {grid_position: 'ETKRGT,HWPQID'}
     name: image_1
     properties: {background: '', display_mode: shrink_to_fit, height: '150', horizontal_align: center, source: _/theme/Untitled.png, spacing_above: large, spacing_below: large}
     type: Image
@@ -53,6 +53,6 @@ slots:
     set_layout_properties: {grid_position: 'FUDWPG,LLEAMX'}
     target: {name: content_panel, type: container}
   title:
-    index: 7
+    index: 8
     set_layout_properties: {slot: title}
     target: {name: '', type: container}

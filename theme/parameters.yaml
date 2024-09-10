@@ -283,20 +283,11 @@ color_scheme:
 roles:
 - components: [Label]
   name: input-prompt
-- components: [Link]
+- components: []
   name: selected
-- components: [ColumnPanel, LinearPanel, XYPanel, RepeatingPanel]
-  display_in_toolbox: true
-  name: outlined-card
-  title: Outlined Card
-- components: [ColumnPanel, LinearPanel, XYPanel, RepeatingPanel]
-  display_in_toolbox: false
-  name: elevated-card
-  title: Elevated Card
-- components: [ColumnPanel, LinearPanel, XYPanel, RepeatingPanel]
-  display_in_toolbox: false
-  name: tonal-card
-  title: Tonal Card
+- {components: null, display_in_toolbox: true, name: outlined-card, title: Outlined Card}
+- {components: null, display_in_toolbox: false, name: elevated-card, title: Elevated Card}
+- {components: null, display_in_toolbox: false, name: tonal-card, title: Tonal Card}
 - components: [Button, FileLoader]
   display_in_toolbox: true
   name: outlined-button
@@ -305,28 +296,14 @@ roles:
   display_in_toolbox: false
   name: filled-button
   title: Filled Button
-- components: [Button, FileLoader]
-  display_in_toolbox: false
-  name: elevated-button
-  title: Elevated Button
-- components: [Button, FileLoader]
-  display_in_toolbox: false
-  name: tonal-button
-  title: Tonal Button
-- components: [TextBox, TextArea, DatePicker, DropDown]
-  display_in_toolbox: true
-  name: outlined
-  title: Outlined TextBox
-- components: [Label, Link]
-  name: display
-- components: [Label, Link]
-  name: headline
-- components: [Label, Link]
-  name: title
-- components: [Label, Link]
-  name: body
-- components: [DataGrid]
-  name: tonal-data-grid
+- {components: null, display_in_toolbox: false, name: elevated-button, title: Elevated Button}
+- {components: null, display_in_toolbox: false, name: tonal-button, title: Tonal Button}
+- {components: null, display_in_toolbox: true, name: outlined, title: Outlined TextBox}
+- {components: null, name: display}
+- {components: null, name: headline}
+- {components: null, name: title}
+- {components: null, name: body}
+- {components: null, name: tonal-data-grid}
 - components: [TextBox, TextArea, DatePicker, DropDown]
   name: outlined-error
 - components: [TextBox, TextArea, DatePicker, DropDown]
