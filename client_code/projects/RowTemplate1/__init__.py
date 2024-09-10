@@ -37,25 +37,26 @@ class RowTemplate1(RowTemplate1Template):
         open_form('ProjectDetailForm', project=project)
 
 
-
   def auto_save(self):
-    try:
+        try:
             # Ensure the item has an ID and other required fields
-   updated_project = self.item
-     if updated_project and 'id' in updated_project:
-          anvil.server.call('update_project',
-                             updated_project['id'],
-                             updated_project.get('project_name', ''),
-                             updated_project.get('description', ''))
+            updated_project = self.item
+            if updated_project and 'id' in updated_project:
+                anvil.server.call('update_project',
+                                  updated_project['id'],
+                                  updated_project.get('project_name', ''),
+                                  updated_project.get('description', ''))
+        except Exception as e:
+            print(f"Error during auto-save: {e}")
 
   def text_box_project_name_lost_focus(self, **event_args):
         # Update project name when user edits the name field
-        self.item['project_name'] = self.text_box_project_name.text
-        self.auto_save()
+        if self.item:
+            self.item['project_name'] = self.text_box_project_name.text
+            self.auto_save()
 
   def text_box_project_description_lost_focus(self, **event_args):
-          # Update project name when user edits the name field
-        self.item['description'] = self.text_box_project_description.text
-        self.auto_save()
-
-
+        # Update project description when user edits the description field
+        if self.item:
+            self.item['description'] = self.text_box_project_description.text
+            self.auto_save()

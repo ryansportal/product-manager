@@ -37,7 +37,7 @@ def create_project(name, description, due_date):
 @anvil.server.callable
 def get_all_projects():
     return app_tables.projects.search()
-
+#Update Projects
 @anvil.server.callable
 def update_project(project_id, name, description):
     # Fetch the project from the database using its ID
@@ -49,3 +49,8 @@ def update_project(project_id, name, description):
         project['description'] = description
         return True
     return False
+
+#Get Tasks for specific project
+@anvil.server.callable
+def get_tasks_for_project(project_id):
+    return app_tables.tasks.search(project_id=project_id)

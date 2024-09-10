@@ -24,7 +24,7 @@ components_by_slot:
         border: ''
         columns:
         - {data_key: project_name, expand: false, id: QNUIYX, title: Project}
-        - {data_key: description, expand: true, id: IGHQGR, title: Description, width: ''}
+        - {data_key: description, expand: false, id: IGHQGR, title: Description, width: 378.734375}
         - {data_key: Component, expand: false, id: MOLHUF, title: ''}
         foreground: theme:On Secondary Container
         role: null

@@ -12,19 +12,16 @@ class ProjectDetailForm(ProjectDetailFormTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+ # Display project details
+    self.project_name_label.text = str(self.project.get('project_name', ''))
+    self.project_description_label.text = str(self.project.get('description', ''))
+     
+# Load tasks for the project into the data grid
+    self.load_tasks()
 
-
- # def new_task_click(self, **event_args):
-  #  task_title = self.task_title_textbox.text
-  #  description = self.task_description_textbox.text
-  #  due_date = self.due_date_picker.date
-  #  assignee = self.assignee_dropdown.selected_value
-  #  status = "In Progress"  # Default status for new tasks
-
-  #  if task_title:
-  #      anvil.server.call('create_task', self.project['id'], task_title, description, due_date, assignee, status)
-  #      alert("Task created successfully!")
-  #  else:
-   #     alert("Please enter a task title.")
-
-  
+  def load_tasks(self):
+    project_id = self.project.get('id')
+    if project_id:
+        tasks = anvil.server.call('get_tasks_for_project', project_id)
+        self.tasks_data_grid.items = tasks
+ 

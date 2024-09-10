@@ -1,7 +1,3 @@
-components:
-- layout_properties: {column: CFQSSY}
-  name: check_box
-  properties: {text: ''}
-  type: CheckBox
+components: []
 container: {type: DataRowPanel}
 is_package: true

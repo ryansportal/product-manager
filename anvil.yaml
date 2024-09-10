@@ -44,6 +44,25 @@ db_schema:
       name: project
       target: projects
       type: link_multiple
+    - admin_ui: {order: 7, width: 200}
+      name: spec
+      type: string
+    - admin_ui: {order: 8, width: 200}
+      name: copy
+      type: string
+    - admin_ui: {order: 9, width: 200}
+      name: design
+      type: string
+    - admin_ui: {order: 10, width: 200}
+      name: beta testing
+      type: string
+    - admin_ui: {order: 11, width: 200}
+      name: id
+      type: string
+    - admin_ui: {order: 12, width: 200}
+      name: projects id
+      target: projects
+      type: link_single
     server: full
     title: tasks
   users:
