@@ -8,6 +8,18 @@ components:
   name: check_box_1
   properties: {text: ''}
   type: CheckBox
+- layout_properties: {column: QNUIYX}
+  name: label_projname
+  properties: {}
+  type: Label
+- layout_properties: {column: IGHQGR}
+  name: label_projdesc
+  properties: {}
+  type: Label
+- layout_properties: {column: QHQORK}
+  name: date_picker_1
+  properties: {}
+  type: DatePicker
 container:
   properties: {auto_display_data: true}
   type: DataRowPanel
