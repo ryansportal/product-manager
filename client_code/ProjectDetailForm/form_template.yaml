@@ -3,33 +3,33 @@ components_by_slot:
   - components:
     - components:
       - components:
-        - layout_properties: {}
+        - layout_properties: {pinned: true}
           name: repeating_panel_1
           properties: {foreground: 'theme:On Secondary Container', item_template: ProjectDetailForm.RowTemplate2}
           type: RepeatingPanel
         data_bindings:
         - {code: 'self.item['''']', property: wrap_on, writeback: false}
-        layout_properties: {expand: true, width: 1505.50390625}
+        layout_properties: {expand: true, width: 100000}
         name: tasks_data_grid
         properties:
           auto_header: true
           background: theme:Primary
           columns:
-          - {data_key: task_name, expand: false, id: RDUTVQ, title: Task, width: 82.06640625}
+          - {data_key: task_name, expand: false, id: RDUTVQ, title: Task, width: 96.12890625}
           - {data_key: description, expand: false, id: UUVOHH, title: Description, width: 81.54296875}
           - {data_key: territory, expand: false, id: JRDAXN, title: Territory, width: 92.76171875}
           - {data_key: type, expand: false, id: RDATAS, title: type, width: 74.66796875}
           - {data_key: spec, expand: false, id: YPHNDH, title: spec, width: 63.31640625}
-          - {data_key: target_date, expand: false, id: JJDMGH, title: target_date, width: 83.0390625}
-          - {data_key: design, expand: false, id: NDBTGG, title: design, width: 64.3125}
-          - {data_key: copy, expand: false, id: CTQSDV, title: copy, width: 42.109375}
-          - {data_key: beta_test, expand: false, id: WENKKC, title: beta_test, width: 71.515625}
-          - {data_key: marketing_updates, expand: false, id: IPFVNL, title: marketing_updates, width: 67.546875}
-          - {data_key: demo_department_feedback, expand: false, id: LRGDFJ, title: demo_department_feedback, width: 93.125}
-          - {data_key: deployment_date, expand: false, id: SHJSVH, title: deployment_date, width: 67.10546875}
-          - {data_key: shared_depolyment_date, expand: false, id: FBVCNP, title: shared_depolyment_date, width: 53.56640625}
-          - {data_key: completed_on, expand: false, id: IHROFO, title: Completed, width: 63.96875}
-          - {data_key: project_name, expand: false, id: YPBJYZ, title: Project, width: 81.640625}
+          - {data_key: target_date, expand: false, id: JJDMGH, title: target_date, width: 92.49609375}
+          - {data_key: design, expand: false, id: NDBTGG, title: design, width: 81.25}
+          - {data_key: copy, expand: false, id: CTQSDV, title: copy, width: 61.32421875}
+          - {data_key: beta_test, expand: false, id: WENKKC, title: beta_test, width: 86.6796875}
+          - {data_key: marketing_updates, expand: false, id: IPFVNL, title: marketing_updates, width: 148.640625}
+          - {data_key: demo_department_feedback, expand: false, id: LRGDFJ, title: demo_department_feedback, width: 211.67578125}
+          - {data_key: deployment_date, expand: false, id: SHJSVH, title: deployment_date, width: 131.2734375}
+          - {data_key: shared_depolyment_date, expand: false, id: FBVCNP, title: shared_depolyment_date, width: 175.06640625}
+          - {data_key: completed_on, expand: false, id: IHROFO, title: Completed, width: 87.64453125}
+          - {data_key: project_name, expand: false, id: YPBJYZ, title: Project, width: 76.8125}
           foreground: theme:On Secondary Container
           role: null
           rows_per_page: 20
