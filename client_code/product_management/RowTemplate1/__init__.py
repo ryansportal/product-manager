@@ -17,6 +17,14 @@ class RowTemplate1(RowTemplate1Template):
 # This function is called when the data for this row is set
     def item_load(self):
         # self.item refers to the current project's data (automatically set by the repeating panel)
-        self.project_name.text = self.item['name']
-        self.description.text = self.item['description']
-        self.due_date.text = str(self.item['due_date'])
+       self.project_name_label.text = str(self.item['project_name'])
+       self.project_description_label.text = str(self.item['description'])
+       self.due_date_label.text = str(self.item['due_date'])
+       self.drop_down_1.text = str(self.item['assignee'])
+
+  def view_project_click(self, **event_args):
+        # Get the current row's project (self.item refers to the current row data)
+        project = self.item
+        
+        # Open the ProjectDetailForm and pass the project data to it
+        open_form('ProjectDetailForm', project=project)

@@ -17,13 +17,13 @@ components_by_slot:
     type: ColumnPanel
   - components:
     - name: repeating_panel_1
-      properties: {item_template: TaskDetailForm.RowTemplate2}
+      properties: {item_template: ProjectDetailForm.RowTemplate2}
       type: RepeatingPanel
     layout_properties: {full_width_row: true}
     name: data_grid_1
     properties:
       columns:
-      - {data_key: project_name, id: YPBJYZ, title: project_name}
+      - {data_key: project_na, id: YPBJYZ, title: project_name}
       - {data_key: description, id: IKRVWN, title: description}
       - {data_key: status, id: LEKDRO, title: status}
       - {data_key: users, id: UHISFQ, title: Assignee}
