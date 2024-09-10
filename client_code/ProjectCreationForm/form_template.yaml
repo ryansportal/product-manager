@@ -4,39 +4,39 @@ components_by_slot:
     - components:
       - layout_properties: {grid_position: 'KNIEML,ICCDZG KQXLSP,NNRKSC'}
         name: label_projname
-        properties: {text: Project Name}
+        properties: {align: left, bold: true, foreground: 'theme:On Secondary Container', text: Project Name}
         type: Label
       - layout_properties: {grid_position: 'KNIEML,ICCDZG XCZSMZ,SQFXHL'}
         name: label_projdesc
-        properties: {text: Project Description}
+        properties: {bold: true, foreground: 'theme:On Secondary Container', text: Project Description}
         type: Label
       - layout_properties: {grid_position: 'KNIEML,ICCDZG LAFMZC,POBVID'}
         name: label_assignee
-        properties: {text: Assignee}
+        properties: {bold: true, foreground: 'theme:On Secondary Container', text: Assignee}
         type: Label
       - layout_properties: {grid_position: 'KNIEML,ICCDZG SAMQPL,GSGARN'}
         name: label_duedate
-        properties: {text: Due Date}
+        properties: {bold: true, foreground: 'theme:On Secondary Container', text: Due Date}
         type: Label
       - layout_properties: {grid_position: 'KNIEML,GRVPFT KBCASH,SAEBKB'}
         name: projname_box
-        properties: {role: outlined}
+        properties: {foreground: 'theme:On Secondary Container', role: outlined}
         type: TextBox
       - layout_properties: {grid_position: 'KNIEML,GRVPFT OOAYFL,CVRSNS'}
         name: projdesc_box
-        properties: {role: outlined}
+        properties: {foreground: 'theme:On Secondary Container', role: outlined}
         type: TextBox
       - layout_properties: {grid_position: 'KNIEML,GRVPFT ZJZZCS,JMEYFB'}
         name: assignee_drop_down
-        properties: {role: outlined}
+        properties: {foreground: 'theme:On Secondary Container', role: outlined}
         type: DropDown
       - layout_properties: {grid_position: 'KNIEML,GRVPFT CDMHSX,YSBPVU'}
         name: date_picker_1
-        properties: {role: outlined}
+        properties: {foreground: 'theme:On Secondary Container', role: outlined}
         type: DatePicker
       layout_properties: {grid_position: 'MIKKAC,WPCFDZ'}
       name: outlined_card_1_copy
-      properties: {role: outlined-card}
+      properties: {background: 'theme:Primary', role: outlined-card}
       type: ColumnPanel
     - event_bindings: {click: addproject_button_click}
       layout_properties: {grid_position: 'PVTMRQ,VKWCKV'}
@@ -45,7 +45,7 @@ components_by_slot:
       type: Button
     layout_properties: {}
     name: outlined_card_1
-    properties: {role: outlined-card}
+    properties: {background: 'theme:Primary', role: outlined-card}
     type: ColumnPanel
 is_package: true
 layout: {type: 'form:Template'}

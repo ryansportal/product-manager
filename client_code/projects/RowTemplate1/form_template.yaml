@@ -1,0 +1,28 @@
+components:
+- event_bindings: {click: view_project_click}
+  layout_properties: {column: MOLHUF}
+  name: view_project
+  properties: {align: center, bold: true, role: elevated-button, text: View Project}
+  type: Button
+- data_bindings:
+  - {code: '', property: tag, writeback: false}
+  - {code: '', property: tooltip, writeback: false}
+  - {code: '', property: border, writeback: false}
+  event_bindings: {lost_focus: text_box_project_name_lost_focus, show: text_box_project_name_show}
+  layout_properties: {column: QNUIYX}
+  name: text_box_project_name
+  properties: {align: left, background: 'theme:Primary', bold: true, foreground: 'theme:On Secondary Container', role: null, text: ''}
+  type: TextBox
+- data_bindings:
+  - {code: '', property: tag, writeback: false}
+  - {code: '', property: tooltip, writeback: false}
+  - {code: '', property: border, writeback: false}
+  event_bindings: {lost_focus: text_box_project_description_lost_focus, show: text_box_project_description_show}
+  layout_properties: {column: IGHQGR}
+  name: text_box_project_description
+  properties: {align: left, background: 'theme:Primary', foreground: 'theme:On Secondary Container', role: null, text: ''}
+  type: TextBox
+container:
+  properties: {auto_display_data: true}
+  type: DataRowPanel
+is_package: true

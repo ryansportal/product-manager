@@ -22,10 +22,20 @@ def check_user():
 #Create project
 @anvil.server.callable
 def create_project(name, description, due_date):
-    app_tables.projects.add_row(project_name=name, description=description, due_date=due_date)
+    app_tables.projects.add_row(project_name=name, description=description)
 
 #Display all projects
 @anvil.server.callable
 def get_all_projects():
     return app_tables.projects.search()
 
+@anvil.server.callable
+def update_project(project_id, name, description):
+    # Fetch the project from the database using its ID
+    project = app_tables.projects.get(id=project_id)
+    
+    # If the project exists, update its fields
+    if project:
+        project['project_name'] = name
+        project['description'] = description
+ 

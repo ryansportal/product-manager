@@ -8,7 +8,7 @@ components:
   - event_bindings: {click: button_logout_click}
     layout_properties: {}
     name: button_logout
-    properties: {text: Log out}
+    properties: {icon: 'fa:sign-out', text: Log out}
     type: Button
   layout_properties: {slot: nav-right}
   name: navbar_links
@@ -20,10 +20,10 @@ components:
     name: home_button
     properties: {text: Home}
     type: Button
-  - event_bindings: {click: product_management_button_click}
+  - event_bindings: {click: projects_button_click}
     layout_properties: {grid_position: 'FRZKOQ,NWKLXU DUJRUX,RJQJZS'}
-    name: product_management_button
-    properties: {text: Product Management}
+    name: projects_button
+    properties: {text: Projects}
     type: Button
   - layout_properties: {grid_position: 'FRZKOQ,NWKLXU NPYTUQ,QWOOZT'}
     name: spacer_1

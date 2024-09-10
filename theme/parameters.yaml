@@ -19,7 +19,7 @@ color_scheme:
   - {color: '#fdfefe', name: On Surface}
   - {color: '#212f3d', name: Surface Variant}
   - {color: '#fdfefe', name: On Surface Variant}
-  - {color: '#212f3d', name: Outline}
+  - {color: 'rgba(28, 27, 31, 0.12)', name: Outline}
   - {color: 'rgba(28, 27, 31, 0.38)', name: On Disabled}
   - {color: 'rgba(28, 27, 31, 0.12)', name: Disabled Container}
   - {color: '#cd372c', name: Light Overlay 1}
@@ -27,7 +27,7 @@ color_scheme:
   - {color: '#cd372c', name: Dark Overlay 1}
   - {color: '#0094d2', name: Dark Overlay 2}
   - {color: '#212f3d', name: Primary Overlay 1}
-  - {color: '#212f3d', name: Primary Overlay 2}
+  - {color: '#fdfefe', name: Primary Overlay 2}
   - {color: '#212f3d', name: Primary Overlay 3}
   preset_groups:
   - name: Colour Scheme

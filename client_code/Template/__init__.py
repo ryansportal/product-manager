@@ -19,9 +19,10 @@ class Template(TemplateTemplate):
   def home_button_click(self, **event_args):
     open_form('Home')
 
-  def product_management_button_click(self, **event_args):
-    open_form('product_management')
+  def projects_button_click(self, **event_args):
+    open_form('projects')
 
   def button_logout_click(self, **event_args):
     anvil.users.logout()
     open_form('Login')
+

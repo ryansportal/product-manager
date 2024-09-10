@@ -12,14 +12,7 @@ class ProjectDetailForm(ProjectDetailFormTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-        # Store the passed project in the class so we can display it
-    self.project = project
-        
-        # Display the project details in the form
-    if project:
-      self.project_name_label.text = project['project_name']
-      self.project_description_label.text = project['description']
-      self.due_date_label.text = str(project['due_date'])
+
 
  # def new_task_click(self, **event_args):
   #  task_title = self.task_title_textbox.text

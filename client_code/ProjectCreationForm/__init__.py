@@ -23,6 +23,9 @@ class ProjectCreationForm(ProjectCreationFormTemplate):
      if project_name:
         anvil.server.call('create_project', project_name, description, due_date)
         alert("Project created successfully!")
+        open_form('projects')
      else:
         alert("Please enter a project name.")
+
+       
 
