@@ -26,6 +26,6 @@ class ProjectDetailForm(ProjectDetailFormTemplate):
         tasks = anvil.server.call('get_tasks_for_project', self.project_row)
         
         # Set the tasks to the data grid or repeating panel
-        self.tasks_data_grid.items = tasks
+        self.repeating_panel_1.items = tasks
     else:
         alert("No project was provided to load tasks.")

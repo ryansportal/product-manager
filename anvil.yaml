@@ -24,38 +24,56 @@ db_schema:
   tasks:
     client: none
     columns:
-    - admin_ui: {width: 200}
-      name: title
+    - admin_ui: {order: 0, width: 200}
+      name: task_name
       type: string
     - admin_ui: {width: 200}
       name: description
       type: string
-    - admin_ui: {width: 200}
-      name: status
+    - admin_ui: {order: 2, width: 200}
+      name: territory
       type: string
-    - admin_ui: {width: 200}
-      name: due_date
-      type: date
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 13, width: 200}
       name: assignee
       target: users
       type: link_multiple
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 5.125, width: 200}
       name: spec
       type: string
     - admin_ui: {width: 200}
       name: copy
       type: string
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 6.875, width: 200}
       name: design
       type: string
-    - admin_ui: {width: 200}
-      name: beta testing
+    - admin_ui: {order: 10, width: 200}
+      name: beta_test
       type: string
     - admin_ui: {width: 200}
       name: project_name_link
       target: projects
       type: link_single
+    - admin_ui: {order: 4.5, width: 200}
+      name: type
+      type: string
+    - admin_ui: {order: 5.75, width: 200}
+      name: target_date
+      type: date
+    - admin_ui: {order: 10.125, width: 200}
+      name: marketing_updates
+      type: string
+    - admin_ui: {order: 10.25, width: 200}
+      name: demo_department_feedback
+      type: string
+    - admin_ui: {order: 10.375, width: 200}
+      name: shared_depolyment_date
+      type: string
+    - admin_ui: {order: 10.3125, width: 200}
+      name: deployment_date
+      type: date
+    - admin_ui: {order: 14, width: 200}
+      name: completed_on
+      type: date
     server: full
     title: tasks
   users:
