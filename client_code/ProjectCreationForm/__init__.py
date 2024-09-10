@@ -15,17 +15,24 @@ class ProjectCreationForm(ProjectCreationFormTemplate):
     # Any code you write here will run before the form opens.
 
   def addproject_button_click(self, **event_args):
-     project_name = self.projname_box.text
-     description = self.projdesc_box.text
-     due_date = self.date_picker_1.date
+     new_project_name = self.projname_box.text
+     new_description = self.projdesc_box.text
+     new_due_date = self.date_picker_1.date
      #assignee = self.assignee_drop_down
 
-     if project_name:
-        anvil.server.call('create_project', project_name, description, due_date)
-        alert("Project created successfully!")
-        open_form('projects')
-     else:
-        alert("Please enter a project name.")
 
        
-
+     if new_project_name:
+            try:
+                # Call the server function to create a new project
+                project_id = anvil.server.call('create_project', new_project_name, new_description, new_due_date)
+                # Check if the project ID was returned successfully
+                if project_id:
+                    alert(f"Project created successfully with ID: {project_id}")
+                    open_form('projects')
+                else:
+                    alert("Failed to create project.")
+            except Exception as e:
+                alert(f"An error occurred: {e}")
+     else:
+            alert("Please enter a project name.")

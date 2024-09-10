@@ -8,7 +8,7 @@ from anvil.tables import app_tables
 
 
 class ProjectDetailForm(ProjectDetailFormTemplate):
-  def __init__(self, project=None, **properties):
+  def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 

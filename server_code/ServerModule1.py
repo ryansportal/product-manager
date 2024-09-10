@@ -22,7 +22,16 @@ def check_user():
 #Create project
 @anvil.server.callable
 def create_project(name, description, due_date):
-    app_tables.projects.add_row(project_name=name, description=description)
+     # Add a new row to the projects table
+    project_row = app_tables.projects.add_row(
+        project_name=name, 
+        description=description, 
+        due_date=due_date
+    )
+    # Get the unique ID assigned by Anvil
+    project_id = project_row.get_id()
+    return project_id
+
 
 #Display all projects
 @anvil.server.callable
@@ -38,4 +47,5 @@ def update_project(project_id, name, description):
     if project:
         project['project_name'] = name
         project['description'] = description
- 
+        return True
+    return False

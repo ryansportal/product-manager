@@ -39,14 +39,14 @@ class RowTemplate1(RowTemplate1Template):
 
 
   def auto_save(self):
-        # Auto-save the current row data when a field loses focus
-      updated_project = self.item
-        
-        # Call the server function to save the project
-      anvil.server.call('update_project', 
-        updated_project['id'], 
-        updated_project['project_name'], 
-        updated_project['description'])
+    try:
+            # Ensure the item has an ID and other required fields
+   updated_project = self.item
+     if updated_project and 'id' in updated_project:
+          anvil.server.call('update_project',
+                             updated_project['id'],
+                             updated_project.get('project_name', ''),
+                             updated_project.get('description', ''))
 
   def text_box_project_name_lost_focus(self, **event_args):
         # Update project name when user edits the name field

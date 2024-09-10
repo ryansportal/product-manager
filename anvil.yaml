@@ -16,8 +16,8 @@ db_schema:
       name: assignee
       target: users
       type: link_multiple
-    - admin_ui: {order: 5, width: 200}
-      name: idcode
+    - admin_ui: {order: 6, width: 200}
+      name: id
       type: string
     server: full
     title: projects
