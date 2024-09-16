@@ -2,52 +2,51 @@ components_by_slot:
   body:
   - components:
     - components:
-      - components:
-        - layout_properties: {pinned: false}
-          name: repeating_panel_1
-          properties: {foreground: 'theme:On Secondary Container', item_template: ProjectDetailForm.RowTemplate2}
-          type: RepeatingPanel
-        data_bindings:
-        - {code: '', property: wrap_on, writeback: false}
-        layout_properties: {expand: true, width: 1000000000000000}
-        name: tasks_data_grid
-        properties:
-          auto_header: true
-          background: theme:Primary
-          columns:
-          - {data_key: task_name, expand: false, id: RDUTVQ, title: Task, width: 174.7578125}
-          - {data_key: description, expand: false, id: UUVOHH, title: Description, width: 168.69921875}
-          - {data_key: territory, expand: false, id: JRDAXN, title: Territory, width: 167.1015625}
-          - {data_key: type, expand: false, id: RDATAS, title: type, width: 143.71484375}
-          - {data_key: spec, expand: false, id: YPHNDH, title: spec, width: 54.9453125}
-          - {data_key: target_date, expand: false, id: JJDMGH, title: target_date, width: 87.67578125}
-          - {data_key: design, expand: false, id: NDBTGG, title: design, width: 64.0546875}
-          - {data_key: copy, expand: false, id: CTQSDV, title: copy, width: 54.02734375}
-          - {data_key: beta_test, expand: false, id: WENKKC, title: beta_test, width: 76.05859375}
-          - {data_key: marketing_updates, expand: false, id: IPFVNL, title: marketing_updates, width: 133.0703125}
-          - {data_key: demo_department_feedback, expand: false, id: LRGDFJ, title: demo_department_feedback, width: 195.59375}
-          - {data_key: deployment_date, expand: false, id: SHJSVH, title: deployment_date, width: 113.1796875}
-          - {data_key: shared_depolyment_date, expand: false, id: FBVCNP, title: shared_depolyment_date, width: 175.06640625}
-          - {data_key: completed_on, expand: false, id: IHROFO, title: Completed, width: 105.31640625}
-          - {data_key: project_name, expand: false, id: YPBJYZ, title: Project, width: 124.0859375}
-          foreground: theme:On Secondary Container
-          role: null
-          rows_per_page: 20
-          show_page_controls: true
-          wrap_on: never
-        type: DataGrid
-      layout_properties: {full_width_row: true, grid_position: 'KNSOUQ,KRHAGU'}
-      name: flow_panel_1
-      properties: {align: center, role: null, spacing: medium, vertical_align: full}
-      type: FlowPanel
-    - event_bindings: {}
-      layout_properties: {grid_position: 'FNXGHK,LWZDVJ'}
-      name: new_task
-      properties: {icon: 'fa:plus', role: elevated-button, text: New Task}
-      type: Button
-    layout_properties: {full_width_row: true}
+      - layout_properties: {pinned: false}
+        name: repeating_panel_1
+        properties: {foreground: 'theme:On Secondary Container', item_template: ProjectDetailForm.RowTemplate2}
+        type: RepeatingPanel
+      data_bindings:
+      - {code: '', property: wrap_on, writeback: false}
+      layout_properties: {full_width_row: false, grid_position: 'AIBNVH,AFYEUP'}
+      name: tasks_data_grid
+      properties:
+        auto_header: true
+        background: theme:Primary
+        columns:
+        - {data_key: task_name, expand: false, id: RDUTVQ, title: Task, width: 174.7578125}
+        - {data_key: description, expand: false, id: UUVOHH, title: Description, width: 168.69921875}
+        - {data_key: territory, expand: false, id: JRDAXN, title: Territory, width: 167.1015625}
+        - {data_key: project_name, expand: false, id: YPBJYZ, title: Project, width: 115.48828125}
+        - {data_key: column_1, id: FRZCXE, title: ''}
+        foreground: theme:On Secondary Container
+        role: null
+        rows_per_page: 20
+        show_page_controls: true
+        wrap_on: never
+      type: DataGrid
+    - components:
+      - layout_properties: {grid_position: 'CMCGEX,CSPDTQ'}
+        name: link_add
+        properties: {align: center, foreground: 'theme:On Secondary Container', icon: 'fa:plus', spacing_above: large}
+        type: Link
+      layout_properties: {full_width_row: false, grid_position: 'AIBNVH,PFNPOJ'}
+      name: column_panel_add
+      properties: {}
+      type: ColumnPanel
+    - components:
+      - event_bindings: {click: link_delete_click}
+        layout_properties: {grid_position: 'NZMOXJ,RMIAVS'}
+        name: link_delete
+        properties: {align: center, col_spacing: none, foreground: 'theme:On Secondary Container', icon: 'fa:trash', icon_align: right, spacing_above: large}
+        type: Link
+      layout_properties: {grid_position: 'AIBNVH,GMYLES'}
+      name: column_panel_delete
+      properties: {}
+      type: ColumnPanel
+    layout_properties: {full_width_row: false}
     name: outlined_card_1
-    properties: {background: 'theme:Primary', role: outlined-card, wrap_on: never}
+    properties: {background: 'theme:Primary', col_widths: '{"PFNPOJ":5,"GMYLES":5,"AFYEUP":50}', role: outlined-card, wrap_on: never}
     type: ColumnPanel
   title: []
 is_package: true

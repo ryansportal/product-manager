@@ -24,16 +24,11 @@ components:
   name: desc_box
   properties: {background: 'theme:Primary', font_size: 15, foreground: 'theme:On Secondary Container', role: null, type: text}
   type: TextBox
-- event_bindings: {change: type_dd_change, show: type_dd_show}
-  layout_properties: {column: RDATAS}
-  name: type_dd
-  properties:
-    background: theme:Primary
-    foreground: theme:On Secondary Container
-    include_placeholder: true
-    items: [New Feature, Internal Ops, Enhancements, Cross Territory Feature]
-    placeholder: '-'
-    role: outlined
-  type: DropDown
-container: {type: DataRowPanel}
+- layout_properties: {column: FRZCXE}
+  name: check_box_1
+  properties: {background: 'theme:Primary', foreground: 'theme:On Secondary Container', text: check_box_1}
+  type: CheckBox
+container:
+  properties: {visible: false}
+  type: DataRowPanel
 is_package: true

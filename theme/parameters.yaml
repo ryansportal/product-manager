@@ -282,8 +282,10 @@ color_scheme:
       name: Manarola Dark
 roles:
 - components: [Label]
+  display_in_toolbox: true
   name: input-prompt
 - components: []
+  display_in_toolbox: true
   name: selected
 - {components: null, display_in_toolbox: true, name: outlined-card, title: Outlined Card}
 - {components: null, display_in_toolbox: false, name: elevated-card, title: Elevated Card}
@@ -296,7 +298,10 @@ roles:
   display_in_toolbox: false
   name: filled-button
   title: Filled Button
-- {components: null, display_in_toolbox: false, name: elevated-button, title: Elevated Button}
+- components: []
+  display_in_toolbox: false
+  name: elevated-button
+  title: Elevated Button
 - {components: null, display_in_toolbox: false, name: tonal-button, title: Tonal Button}
 - {components: null, display_in_toolbox: true, name: outlined, title: Outlined TextBox}
 - {components: null, name: display}

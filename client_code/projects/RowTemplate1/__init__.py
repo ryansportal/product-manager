@@ -41,7 +41,7 @@ class RowTemplate1(RowTemplate1Template):
         project = self.item
         
         # Open the ProjectDetailForm and pass the project data to it
-        open_form('ProjectDetailForm_copy', project=project)
+        open_form('ProjectDetailForm', project=project)
 
 
   def auto_save(self):
