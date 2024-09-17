@@ -19,41 +19,50 @@ def check_user():
     raise anvil.users.AuthenticationFailed('user not logged in')
 
 #Create project
-@anvil.server.callable
-def create_project(name, description, due_date):
+@anvil.server.callable(require_user=True)
+def create_project(name, description, assignee_name, due_date):
+
+      # Find the assignee in the Users table by name
+    assignee = app_tables.users.get(name=assignee_name)
+  
      # Add a new row to the projects table
     project_row = app_tables.projects.add_row(
         project_name=name, 
         description=description, 
+        assignee=assignee,
         due_date=due_date
     )
     # Get and return the auto-generated ID for this new project
     return project_row.get_id()
 
 #Display all projects
-@anvil.server.callable
+@anvil.server.callable(require_user=True)
 def get_all_projects():
     return app_tables.projects.search()
 #SAVE Projects
-@anvil.server.callable
-def update_project(project_id, name, description):
+@anvil.server.callable(require_user=True)
+def update_project(project_id, name, description, assignee_name):
     # Fetch the project from the database using its ID
     project = app_tables.projects.get(id=project_id)
+
+      # Find the assignee in the Users table by name
+    assignee = app_tables.users.get(name=assignee_name)
     
     # If the project exists, update its fields
     if project:
         project['project_name'] = name
         project['description'] = description
+        project['assignee'] = assignee
         return True
     return False
 
 #Get Tasks for specific project
-@anvil.server.callable
+@anvil.server.callable(require_user=True)
 def get_tasks_for_project(project_row):
     return app_tables.tasks.search(project_name_link=project_row)
 
 #SAVE TASKS
-@anvil.server.callable
+@anvil.server.callable(require_user=True)
 def update_project_task(project_task_id, project_name, task_name, territory):
     # Update the project task record in the data table
     app_tables.tasks.update_row(
@@ -64,7 +73,8 @@ def update_project_task(project_task_id, project_name, task_name, territory):
     )
 
 @anvil.server.callable(require_user=True)
-def add_column_to_db(column_name, project, type):   
-  column_row = app_tables.columns.add_row(title=column_name, type=type)
-  project['columns'] += [column_row]
-  return column_row
+def get_user_names():
+  #query the users table for all users
+  users = app_tables.users.search()
+ #return a list of user names
+  return [{'name': user['name']} for user in users]

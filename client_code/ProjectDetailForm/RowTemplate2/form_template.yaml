@@ -24,10 +24,6 @@ components:
   name: desc_box
   properties: {background: 'theme:Primary', font_size: 15, foreground: 'theme:On Secondary Container', role: null, type: text}
   type: TextBox
-- layout_properties: {column: FRZCXE}
-  name: check_box_1
-  properties: {background: 'theme:Primary', foreground: 'theme:On Secondary Container', text: check_box_1}
-  type: CheckBox
 container:
   properties: {visible: false}
   type: DataRowPanel

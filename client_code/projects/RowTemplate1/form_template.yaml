@@ -2,7 +2,7 @@ components:
 - event_bindings: {click: view_project_click}
   layout_properties: {column: MOLHUF}
   name: view_project
-  properties: {align: center, bold: true, role: elevated-button, text: View Project}
+  properties: {align: center, bold: true, icon: 'fa:search', role: elevated-button, text: ''}
   type: Button
 - data_bindings:
   - {code: '', property: tag, writeback: false}
@@ -29,7 +29,7 @@ components:
     background: theme:Primary
     foreground: theme:On Secondary Container
     include_placeholder: true
-    items: ['Yes', 'No', N/A]
+    items: []
     placeholder: '-'
     role: outlined
   type: DropDown

@@ -23,17 +23,31 @@ class RowTemplate1(RowTemplate1Template):
     self.text_box_project_description.text = str(self.item['description'])
 
   def drop_down_1_show(self, **event_args):
-# Ensure 'in_progress' value is one of the dropdown items
-    in_progress_value = self.item['in_progress']
-    if in_progress_value in self.drop_down_1.items:
-        self.drop_down_1.selected_value = in_progress_value
-      
+
+        # Call the server function to get the list of user names
+  #  users = anvil.server.call('get_user_names')
+    # Create a list of tuples for dropdown items (display_name)
+  #  user_items = [(user['name'], user['name']) for user in users]
+    
+    # Populate the dropdown with user names
+   # self.drop_down_1.items = user_items
+    
+    
+    
+    
+    # Ensure 'in_progress' value is one of the dropdown items
+
+ #   assignee_value = self.item['assignee']
+  #  if assignee_value in self.drop_down_1.items:
+  #      self.drop_down_1.selected_value = assignee_value
+
+
 # This function is called when the data for this row is set
-  def item_load(self):
+   def item_load(self):
         # self.item refers to the current project's data (automatically set by the repeating panel)
     self.text_box_1.text = str(self.item['project_name'])
     self.project_description_label.text = str(self.item['description'])
-    self.drop_down_1.text = str(self.item['in_progress'])
+    self.drop_down_1.text = str(self.item['assignee'])
 
 
   def view_project_click(self, **event_args):
@@ -53,7 +67,7 @@ class RowTemplate1(RowTemplate1Template):
                                   updated_project['id'],
                                   updated_project.get('project_name', ''),
                                   updated_project.get('description', ''),
-                                  updated_project.get('in_progress', ''))
+                                  updated_project.get('assignee', ''))
         except Exception as e:
             print(f"Error during auto-save: {e}")
 
@@ -69,11 +83,11 @@ class RowTemplate1(RowTemplate1Template):
             self.item['description'] = self.text_box_project_description.text
             self.auto_save()
 
-  def drop_down_1_change(self, **event_args):
+ # def drop_down_1_change(self, **event_args):
  # Update project in_progress when user selects an option in the dropdown
-        if self.item:
-            self.item['in_progress'] = self.drop_down_1.selected_value
-            self.auto_save()
+  #      if self.item:
+     #       self.item['assignee'] = self.drop_down_1.selected_value
+     #       self.auto_save()
 
 
   

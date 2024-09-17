@@ -1,6 +1,19 @@
 components_by_slot:
   body:
   - components:
+    - layout_properties: {grid_position: 'OOGZHU,WWYUJA QVALVB,UQJQFX'}
+      name: spacer_1
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {grid_position: 'OOGZHU,WWYUJA VFVANB,PZSSSO'}
+      name: spacer_1_copy
+      properties: {height: 32}
+      type: Spacer
+    - event_bindings: {click: delete_button_click}
+      layout_properties: {grid_position: 'OOGZHU,KLUVWD'}
+      name: delete_button
+      properties: {background: 'theme:Tertiary', icon: 'fa:trash', role: outlined-button, text: ''}
+      type: Button
     - components:
       - layout_properties: {pinned: false}
         name: repeating_panel_1
@@ -17,31 +30,16 @@ components_by_slot:
         - {data_key: task_name, expand: false, id: RDUTVQ, title: Task, width: 174.7578125}
         - {data_key: description, expand: false, id: UUVOHH, title: Description, width: 168.69921875}
         - {data_key: territory, expand: false, id: JRDAXN, title: Territory, width: 167.1015625}
-        - {data_key: project_name, expand: false, id: YPBJYZ, title: Project, width: 115.48828125}
-        - {data_key: column_1, id: FRZCXE, title: ''}
+        - {data_key: project_name, expand: false, id: YPBJYZ, title: Project, width: 116.91015625}
         foreground: theme:On Secondary Container
         role: null
         rows_per_page: 20
         show_page_controls: true
         wrap_on: never
       type: DataGrid
-    - components:
-      - layout_properties: {grid_position: 'CMCGEX,CSPDTQ'}
-        name: link_add
-        properties: {align: center, foreground: 'theme:On Secondary Container', icon: 'fa:plus', spacing_above: large}
-        type: Link
-      layout_properties: {full_width_row: false, grid_position: 'AIBNVH,PFNPOJ'}
-      name: column_panel_add
-      properties: {}
-      type: ColumnPanel
-    - components: []
-      layout_properties: {grid_position: 'AIBNVH,GMYLES'}
-      name: column_panel_delete
-      properties: {}
-      type: ColumnPanel
-    layout_properties: {full_width_row: false}
+    layout_properties: {}
     name: outlined_card_1
-    properties: {background: 'theme:Primary', col_widths: '{"PFNPOJ":5,"GMYLES":5,"AFYEUP":50}', role: outlined-card, wrap_on: never}
+    properties: {background: 'theme:Primary', col_widths: '{"PFNPOJ":5,"AFYEUP":50,"WWYUJA":50,"KLUVWD":10}', role: outlined-card, wrap_on: never}
     type: ColumnPanel
   title: []
 is_package: true
