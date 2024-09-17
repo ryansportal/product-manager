@@ -12,6 +12,14 @@ class ProjectDetailForm(ProjectDetailFormTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    self.add_new_column_link = Link(text="New Column", icon="fa:plus", spacing_above="small", spacing_below="none")
+    self.add_new_column_link.add_event_handler('click', self.add_new_column_link_click)
+
+    #set up the Data Grid
+    self.add_data_to_grid()
+    self.create_header_row()
+    self.repeating_panel_1.add_event_handler("x-delete-row", self.add_data_to_grid)
+
     # Save the passed project row to use later
     self.project_row = project  # Use the 'project' parameter passed to the form
 
