@@ -62,3 +62,9 @@ def update_project_task(project_task_id, project_name, task_name, territory):
         task_name=task_name,
         territory=territory
     )
+
+@anvil.server.callable(require_user=True)
+def add_column_to_db(column_name, project, type):   
+  column_row = app_tables.columns.add_row(title=column_name, type=type)
+  project['columns'] += [column_row]
+  return column_row

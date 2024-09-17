@@ -1,0 +1,62 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'TCMOOU,QZDVYE'}
+    name: spacer_5
+    properties: {height: 32}
+    type: Spacer
+  - layout_properties: {grid_position: 'TCMOOU,PWNBWD'}
+    name: label_1
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: Create New Column, tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {grid_position: 'TCMOOU,JKUBEA'}
+    name: spacer_7
+    properties: {height: 35.11328125}
+    type: Spacer
+  - layout_properties: {grid_position: ',XBXXNG XNNHCB,XZJUOK'}
+    name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+  - layout_properties: {grid_position: ',XBXXNG GCXKMN,LTXGUE'}
+    name: spacer_4
+    properties: {height: 32}
+    type: Spacer
+  - layout_properties: {grid_position: ',ZBOBXL WPDVTQ,SMGFVX'}
+    name: label_2
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: input-prompt, spacing_above: small, spacing_below: small, text: 'Title:', tooltip: '', underline: false, visible: true}
+    type: Label
+  - event_bindings: {change: title_text_box_change}
+    layout_properties: {grid_position: ',ZBOBXL WPDVTQ,AEJMGZ'}
+    name: title_text_box
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - layout_properties: {grid_position: ',ZBOBXL KMASZR,BUSWGE'}
+    name: label_3
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: input-prompt, spacing_above: small, spacing_below: small, text: 'Type:', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {grid_position: ',ZBOBXL KMASZR,KVLQAG'}
+    name: type_dropdown
+    properties: {foreground: 'theme:Primary'}
+    type: DropDown
+  - layout_properties: {grid_position: ''}
+    name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+  - layout_properties: {grid_position: ''}
+    name: spacer_6
+    properties: {height: '18', spacing_above: small, spacing_below: small, tooltip: '', visible: true}
+    type: Spacer
+  - layout_properties: {grid_position: 'ZHSLJX,JQHACH'}
+    name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+  - event_bindings: {click: create_button_click}
+    layout_properties: {grid_position: 'NXKPMO,OSWNKS'}
+    name: create_button
+    properties: {align: center, background: 'theme:On Secondary Container', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: filled-button, spacing_above: small, spacing_below: small, text: Create, tooltip: '', underline: false, visible: true}
+    type: Button
+  layout_properties: {grid_position: 'UMKIOB,CNUSEY'}
+  name: outlined_card_1
+  properties: {background: 'theme:Primary', col_spacing: medium, foreground: 'theme:On Secondary Container', role: elevated-card}
+  type: ColumnPanel
+container: {type: ColumnPanel}
+is_package: true

@@ -1,5 +1,16 @@
 allow_embedding: false
 db_schema:
+  columns:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: title
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: type
+      type: string
+    server: full
+    title: columns
   projects:
     client: full
     columns:

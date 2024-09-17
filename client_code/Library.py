@@ -11,3 +11,4 @@ from anvil.tables import app_tables
 #    Module1.say_hello()
 #
 
+column_types = ['Text', 'Checkbox', 'Priority', 'Users', 'Drop Down']
