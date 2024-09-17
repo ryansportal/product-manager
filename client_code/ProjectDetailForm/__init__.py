@@ -30,6 +30,3 @@ class ProjectDetailForm(ProjectDetailFormTemplate):
     else:
         alert("No project was provided to load tasks.")
 
-  def link_delete_click(self, **event_args):
-    if 
-      

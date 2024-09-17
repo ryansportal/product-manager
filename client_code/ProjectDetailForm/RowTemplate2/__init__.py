@@ -76,10 +76,3 @@ class RowTemplate2(RowTemplate2Template):
       self.item ['type'] = self.type_dd.selected_value
       self.auto_save()
 
-  def new_column_click(self, **event_args):
-  
-
-
-
-  
-
