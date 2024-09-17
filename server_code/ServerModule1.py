@@ -20,7 +20,7 @@ def check_user():
 
 #Create project
 @anvil.server.callable(require_user=True)
-def create_project(name, description, due_date, assignee_name):
+def create_project(name, description, assignee_name):
 
   # Find the assignee in the Users table by name
     assignee = app_tables.users.get(name=assignee_name)
@@ -29,7 +29,6 @@ def create_project(name, description, due_date, assignee_name):
     project_row = app_tables.projects.add_row(
         project_name=name, 
         description=description, 
-        due_date=due_date,
         assignee=[assignee]
     )
     # Get and return the auto-generated ID for this new project

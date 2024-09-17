@@ -14,8 +14,6 @@ from anvil import *
 #
 
 
-#def say_hello():
-#  print("Hello, world")
 
 def Startup():
   try:
