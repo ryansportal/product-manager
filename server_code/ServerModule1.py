@@ -20,17 +20,17 @@ def check_user():
 
 #Create project
 @anvil.server.callable(require_user=True)
-def create_project(name, description, assignee_name, due_date):
+def create_project(name, description, due_date, assignee_name):
 
-      # Find the assignee in the Users table by name
+  # Find the assignee in the Users table by name
     assignee = app_tables.users.get(name=assignee_name)
   
      # Add a new row to the projects table
     project_row = app_tables.projects.add_row(
         project_name=name, 
         description=description, 
-        assignee=assignee,
-        due_date=due_date
+        due_date=due_date,
+        assignee=[assignee]
     )
     # Get and return the auto-generated ID for this new project
     return project_row.get_id()
@@ -41,18 +41,15 @@ def get_all_projects():
     return app_tables.projects.search()
 #SAVE Projects
 @anvil.server.callable(require_user=True)
-def update_project(project_id, name, description, assignee_name):
+def update_project(project_id, name, description):
     # Fetch the project from the database using its ID
     project = app_tables.projects.get(id=project_id)
 
-      # Find the assignee in the Users table by name
-    assignee = app_tables.users.get(name=assignee_name)
-    
+   
     # If the project exists, update its fields
     if project:
         project['project_name'] = name
         project['description'] = description
-        project['assignee'] = assignee
         return True
     return False
 
