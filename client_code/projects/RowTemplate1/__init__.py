@@ -14,7 +14,13 @@ class RowTemplate1(RowTemplate1Template):
 
       # Any code you write here will run before the form opens.
  
-
+    # Call the server function to get the list of user names
+    users = anvil.server.call('get_user_names')
+    # Create a list of tuples for dropdown items (display_name)
+    user_items = [(user['name'], user['name']) for user in users]
+    
+    # Populate the dropdown with user names
+    self.assignee_drop_down.items = user_items
     # Any code you write here will run before the form opens.
   def text_box_project_name_show(self, **event_args):
     self.text_box_project_name.text = str(self.item['project_name'])
@@ -29,6 +35,7 @@ class RowTemplate1(RowTemplate1Template):
         # self.item refers to the current project's data (automatically set by the repeating panel)
     self.text_box_1.text = str(self.item['project_name'])
     self.project_description_label.text = str(self.item['description'])
+
 
 
 

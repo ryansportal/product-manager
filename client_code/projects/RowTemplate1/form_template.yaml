@@ -24,7 +24,7 @@ components:
   type: TextBox
 - event_bindings: {show: drop_down_1_show}
   layout_properties: {column: VSJJWG}
-  name: assignee_drop_downd
+  name: assignee_drop_down
   properties:
     background: theme:Primary
     foreground: theme:On Secondary Container
