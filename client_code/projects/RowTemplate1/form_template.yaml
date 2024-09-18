@@ -22,7 +22,7 @@ components:
   name: text_box_project_description
   properties: {align: left, background: 'theme:Primary', foreground: 'theme:On Secondary Container', role: null, text: ''}
   type: TextBox
-- event_bindings: {show: drop_down_1_show}
+- event_bindings: {change: assignee_drop_down_change, show: assignee_drop_down_show}
   layout_properties: {column: VSJJWG}
   name: assignee_drop_down
   properties:
