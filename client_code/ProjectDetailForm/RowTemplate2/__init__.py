@@ -15,21 +15,21 @@ class RowTemplate2(RowTemplate2Template):
      # Manually trigger item_load to ensure it loads when the form opens
     self.item_load()
     
-  #Show editable fields  
-#  def project_task_name_show(self, **event_args):
- #  self.project_task_name.text = self.item['project_name_link']['project_name']   
+
+ #Show editable fields  
+  def project_task_name_show(self, **event_args):
+    self.project_task_name.text = self.item['project_name_link']['project_name']   
   def task_box_show(self, **event_args):
     self.task_box.text = self.item['task_name']
   def desc_box_show(self, **event_args):
     self.desc_box.text = self.item['description']
-
     
 
     
 # This function is called when the data for this row is set
   def item_load(self):
     if self.item:
-       #  Access the project_name directly using the column name without extra quotes or lists
+        # Access the project_name directly using the column name without extra quotes or lists
         self.project_task_name.text = self.item['project_name_link']['project_name']
     else:
         print("No item data found")
@@ -56,14 +56,17 @@ class RowTemplate2(RowTemplate2Template):
      #       self.item['task_name'] = self.task_box.text
      #       self.auto_save()
 
-  def desc_box_lost_focus(self, **event_args):
-       if self.item:
-            self.item['description'] = self.desc_box.text
+  # Lost Focus Update Fields:
+  def task_box_lost_focus(self, **event_args):
+        # Update project description when user edits the description field
+        if self.item:
+            self.item['task_name'] = self.task_box.text
             self.auto_save()
 
-  def text_box_1_show(self, **event_args):
-    self.text_box_1.text = self.item['task_name']
-
+  def desc_box_lost_focus(self, **event_args):
+        if self.item:
+            self.item['description'] = self.desc_box.text
+            self.auto_save()
 
  
 
