@@ -20,7 +20,9 @@ class projects(projectsTemplate):
   def load_projects(self):
 # Call the server function to fetch all projects
     projects = anvil.server.call('get_all_projects')
-        
+          # Debug: Ensure we are getting the correct project data
+    print("Projects:", projects)
+              
 # Set the fetched projects as the items for the repeating panel
     self.repeating_panel_1.items = projects
 
