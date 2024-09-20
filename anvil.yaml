@@ -1,16 +1,5 @@
 allow_embedding: false
 db_schema:
-  columns:
-    client: none
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      name: title
-      type: string
-    - admin_ui: {order: 1, width: 200}
-      name: type
-      type: string
-    server: full
-    title: columns
   projects:
     client: full
     columns:
@@ -114,7 +103,7 @@ services:
 - client_config: {}
   server_config: {auto_create_missing_columns: true}
   source: /runtime/services/tables.yml
-- client_config: {allow_remember_me: false, allow_signup: false, confirm_email: false, enable_automatically: true, mfa_timeout_days: 1, remember_me_days: 1, require_mfa: false, require_secure_passwords: false, share_login_status: false, use_email: true, use_google: false, use_token: true}
+- client_config: {allow_remember_me: true, allow_signup: false, confirm_email: false, enable_automatically: true, mfa_timeout_days: 1, remember_me_days: 365, require_mfa: false, require_secure_passwords: false, share_login_status: false, use_email: true, use_google: false, use_token: true}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
 startup: {module: Startup, type: module}

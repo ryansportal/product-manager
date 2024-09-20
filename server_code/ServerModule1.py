@@ -38,9 +38,10 @@ def create_project(name, description, assignee_name):
 @anvil.server.callable(require_user=True)
 def get_all_projects():
     return app_tables.projects.search()
+    
 #SAVE Projects
 @anvil.server.callable(require_user=True)
-def update_project(project_id, name, description):
+def update_project(project_id, name, description, assignee):
     # Fetch the project from the database using its ID
     project = app_tables.projects.get(id=project_id)
 
@@ -49,6 +50,7 @@ def update_project(project_id, name, description):
     if project:
         project['project_name'] = name
         project['description'] = description
+        project['assignee'] = assignee
         return True
     return False
 
@@ -74,3 +76,4 @@ def get_user_names():
   users = app_tables.users.search()
  #return a list of user names
   return [{'name': user['name']} for user in users]
+
