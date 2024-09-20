@@ -19,7 +19,7 @@ db_schema:
     - admin_ui: {width: 200}
       name: id
       type: string
-    - admin_ui: {order: 7, width: 200}
+    - admin_ui: {width: 200}
       name: in_progress
       type: string
     server: full
@@ -27,27 +27,23 @@ db_schema:
   tasks:
     client: full
     columns:
-    - admin_ui: {order: 0, width: 200}
+    - admin_ui: {width: 200}
       name: task_name
       type: string
     - admin_ui: {width: 200}
       name: description
       type: string
-    - admin_ui: {order: 2, width: 200}
+    - admin_ui: {width: 200}
       name: territory
       type: string
-    - admin_ui: {order: 13, width: 200}
-      name: assignee
-      target: users
-      type: link_multiple
+    - admin_ui: {width: 200}
+      name: type
+      type: string
     - admin_ui: {width: 200}
       name: project_name_link
       target: projects
       type: link_single
-    - admin_ui: {order: 4.5, width: 200}
-      name: type
-      type: string
-    - admin_ui: {order: 14, width: 200}
+    - admin_ui: {width: 200}
       name: completed_on
       type: date
     server: full
@@ -79,10 +75,10 @@ db_schema:
     - admin_ui: {width: 200}
       name: remembered_logins
       type: simpleObject
-    - admin_ui: {order: 8, width: 200}
+    - admin_ui: {width: 200}
       name: signed_up
       type: datetime
-    - admin_ui: {order: 9, width: 200}
+    - admin_ui: {width: 200}
       name: mfa
       type: simpleObject
     server: full
@@ -100,11 +96,11 @@ runtime_options:
   server_version: python3-sandbox
   version: 3
 services:
-- client_config: {}
+- client_config: {enable_v2: false}
   server_config: {auto_create_missing_columns: true}
   source: /runtime/services/tables.yml
 - client_config: {allow_remember_me: true, allow_signup: false, confirm_email: false, enable_automatically: true, mfa_timeout_days: 1, remember_me_days: 365, require_mfa: false, require_secure_passwords: false, share_login_status: false, use_email: true, use_google: false, use_token: true}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
-startup: {module: Startup, type: module}
+startup: {module: projects, type: form}
 startup_form: null

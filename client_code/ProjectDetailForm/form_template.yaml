@@ -29,8 +29,9 @@ components_by_slot:
         columns:
         - {data_key: task_name, expand: false, id: RDUTVQ, title: Task, width: 174.7578125}
         - {data_key: description, expand: false, id: UUVOHH, title: Description, width: 168.69921875}
-        - {data_key: territory, expand: false, id: JRDAXN, title: Territory, width: 167.1015625}
+        - {data_key: '', expand: false, id: JRDAXN, title: Drop Down, width: 167.1015625}
         - {data_key: project_name, expand: false, id: YPBJYZ, title: Project, width: 116.91015625}
+        - {data_key: column_1, id: KLOZNT, title: Column 1}
         foreground: theme:On Secondary Container
         role: null
         rows_per_page: 20

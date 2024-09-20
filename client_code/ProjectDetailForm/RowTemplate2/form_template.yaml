@@ -1,7 +1,7 @@
 components:
-- event_bindings: {change: territory_dd_change, show: territory_dd_show}
+- event_bindings: {change: drop_down__1_change, show: drop_down__1_show}
   layout_properties: {column: JRDAXN}
-  name: territory_dd
+  name: drop_down__1
   properties:
     foreground: theme:On Secondary Container
     include_placeholder: true
@@ -9,12 +9,12 @@ components:
     placeholder: '-'
     role: outlined
   type: DropDown
-- event_bindings: {}
+- event_bindings: {show: project_task_name_show}
   layout_properties: {column: YPBJYZ}
   name: project_task_name
-  properties: {visible: true}
+  properties: {foreground: 'theme:On Secondary Container', role: null, visible: true}
   type: Label
-- event_bindings: {lost_focus: task_box_lost_focus, show: task_box_show}
+- event_bindings: {lost_focus: task_box_lost_focus, pressed_enter: task_box_pressed_enter, show: task_box_show}
   layout_properties: {column: RDUTVQ}
   name: task_box
   properties: {background: 'theme:Primary', font_size: 15, foreground: 'theme:On Secondary Container', role: null, type: text}
@@ -23,6 +23,11 @@ components:
   layout_properties: {column: UUVOHH}
   name: desc_box
   properties: {background: 'theme:Primary', font_size: 15, foreground: 'theme:On Secondary Container', role: null, type: text}
+  type: TextBox
+- event_bindings: {show: text_box_1_show}
+  layout_properties: {column: KLOZNT}
+  name: text_box_1
+  properties: {}
   type: TextBox
 container:
   properties: {visible: false}

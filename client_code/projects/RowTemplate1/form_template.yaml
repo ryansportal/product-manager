@@ -8,7 +8,7 @@ components:
   - {code: '', property: tag, writeback: false}
   - {code: '', property: tooltip, writeback: false}
   - {code: '', property: border, writeback: false}
-  event_bindings: {lost_focus: text_box_project_name_lost_focus, show: text_box_project_name_show}
+  event_bindings: {lost_focus: text_box_project_name_lost_focus, pressed_enter: text_box_project_name_pressed_enter, show: text_box_project_name_show}
   layout_properties: {column: QNUIYX}
   name: text_box_project_name
   properties: {align: left, background: 'theme:Primary', bold: true, foreground: 'theme:On Secondary Container', role: null, text: ''}
@@ -17,7 +17,7 @@ components:
   - {code: '', property: tag, writeback: false}
   - {code: '', property: tooltip, writeback: false}
   - {code: '', property: border, writeback: false}
-  event_bindings: {lost_focus: text_box_project_description_lost_focus, show: text_box_project_description_show}
+  event_bindings: {lost_focus: text_box_project_description_lost_focus, pressed_enter: text_box_project_description_pressed_enter, show: text_box_project_description_show}
   layout_properties: {column: IGHQGR}
   name: text_box_project_description
   properties: {align: left, background: 'theme:Primary', foreground: 'theme:On Secondary Container', role: null, text: ''}

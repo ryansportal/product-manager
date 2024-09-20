@@ -4,11 +4,6 @@ from anvil.tables import app_tables
 import anvil.users
 import anvil.server
 
-# This is a server module. It runs on the Anvil server,
-# rather than in the user's browser.
-#
-# To allow anvil.server.call() to call functions here, we mark
-# them with @anvil.server.callable.
 
 
 #Users
@@ -61,13 +56,12 @@ def get_tasks_for_project(project_row):
 
 #SAVE TASKS
 @anvil.server.callable(require_user=True)
-def update_project_task(project_task_id, project_name, task_name, territory):
+def update_project_task(project_task_id, project_name, task_name):
     # Update the project task record in the data table
     app_tables.tasks.update_row(
         id=project_task_id,
         project_name_link={'project_name': project_name},  # Adjust as needed
-        task_name=task_name,
-        territory=territory
+        task_name=task_name
     )
 
 @anvil.server.callable(require_user=True)
@@ -77,3 +71,6 @@ def get_user_names():
  #return a list of user names
   return [{'name': user['name']} for user in users]
 
+@anvil.server.callable(require_user=True)
+def get_user_by_name(name):
+    return app_tables.users.get(name=name)
