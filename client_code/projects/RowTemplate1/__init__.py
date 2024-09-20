@@ -25,7 +25,7 @@ class RowTemplate1(RowTemplate1Template):
         # Set the dropdown's selected value to the current assignee (which is a list of rows)
         if self.item['assignee']:
             # Assuming single assignee, set selected_value to the first assignee row
-            assignee_row = self.item['assignee'][0] if self.item['assignee'] else None
+            assignee_row = self.text['assignee']
             self.assignee_drop_down.selected_value = assignee_row
 
     def item_load(self):
@@ -35,15 +35,16 @@ class RowTemplate1(RowTemplate1Template):
 
         # Set the dropdown value based on the current assignee
         if self.item['assignee']:
-            assignee_row = self.item['assignee'][0] if self.item['assignee'] else None
+            assignee_row = self.text['assignee']
             self.assignee_drop_down.selected_value = assignee_row
 
     def assignee_drop_down_change(self, **event_args):
         # Update the assignee field with the selected user row from the dropdown
-        if self.item:
-            selected_user_row = self.assignee_drop_down.selected_value  # This will be the user row
-            self.item['assignee'] = [selected_user_row]  # Assign the selected row as a list
-            self.auto_save()
+        self.text = self.assignee_drop_down.selected_value
+     #   if self.item:
+      #      selected_user_row = self.assignee_drop_down.selected_value  # This will be the user row
+      #      self.item['assignee'] = [selected_user_row]  # Assign the selected row as a list
+        self.auto_save()
 
     def auto_save(self):
         try:
@@ -69,3 +70,6 @@ class RowTemplate1(RowTemplate1Template):
         if self.item:
             self.item['description'] = self.text_box_project_description.text
             self.auto_save()
+
+  #  def view_project_click(self, **event_args):
+        
